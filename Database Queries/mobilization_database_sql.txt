@@ -1,0 +1,184 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 12, 2023 at 08:56 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `mobilization database`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers_database`
+--
+
+CREATE TABLE `customers_database` (
+  `ID` int(11) NOT NULL,
+  `Mobi Account_Number` varchar(255) NOT NULL,
+  `Customer Name` varchar(255) NOT NULL,
+  `Customer Account_Number` varchar(255) NOT NULL,
+  `Telephone` varchar(255) NOT NULL,
+  `Location` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `daily sales table`
+--
+
+CREATE TABLE `daily sales table` (
+  `ID` int(50) NOT NULL,
+  `Date` date NOT NULL,
+  `Mobi Name` varchar(255) NOT NULL,
+  `Mobi Account Number` varchar(255) NOT NULL,
+  `Daily Sales` int(255) NOT NULL,
+  `Customers _Visited` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mobis account number table`
+--
+
+CREATE TABLE `mobis account number table` (
+  `ID` int(50) NOT NULL,
+  `mobis account number table` varchar(255) NOT NULL,
+  `Mobi Account Number` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `new officer_info`
+--
+
+CREATE TABLE `new officer_info` (
+  `ID` int(50) NOT NULL,
+  `First Name` varchar(255) NOT NULL,
+  `Last Name` varchar(255) NOT NULL,
+  `DOB` date NOT NULL,
+  `Gender` varchar(255) NOT NULL,
+  `Phone` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `new officer_info`
+--
+
+INSERT INTO `new officer_info` (`ID`, `First Name`, `Last Name`, `DOB`, `Gender`, `Phone`) VALUES
+(1, 'Jennifer', 'Fenu', '1990-09-10', 'Female', '054040320'),
+(2, 'Abigail', 'Amoanu', '2000-08-14', 'Female', '0556868502'),
+(3, 'Emmanuel', 'Dagbodzo', '1997-07-14', 'Male', '0247420424');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registeration_info`
+--
+
+CREATE TABLE `registeration_info` (
+  `ID` int(50) NOT NULL,
+  `First Name` varchar(255) NOT NULL,
+  `Last Name` varchar(255) NOT NULL,
+  `DOB` date NOT NULL,
+  `Gender` varchar(255) NOT NULL,
+  `Username` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `registeration_info`
+--
+
+INSERT INTO `registeration_info` (`ID`, `First Name`, `Last Name`, `DOB`, `Gender`, `Username`, `Password`) VALUES
+(1, 'Philip', 'Darko', '1993-11-09', 'Male', 'philip.darko', '12345678');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `customers_database`
+--
+ALTER TABLE `customers_database`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `daily sales table`
+--
+ALTER TABLE `daily sales table`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `mobis account number table`
+--
+ALTER TABLE `mobis account number table`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `new officer_info`
+--
+ALTER TABLE `new officer_info`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `registeration_info`
+--
+ALTER TABLE `registeration_info`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `customers_database`
+--
+ALTER TABLE `customers_database`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `daily sales table`
+--
+ALTER TABLE `daily sales table`
+  MODIFY `ID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `mobis account number table`
+--
+ALTER TABLE `mobis account number table`
+  MODIFY `ID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `new officer_info`
+--
+ALTER TABLE `new officer_info`
+  MODIFY `ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `registeration_info`
+--
+ALTER TABLE `registeration_info`
+  MODIFY `ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
